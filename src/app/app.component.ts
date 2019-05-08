@@ -9,24 +9,22 @@ import { HttpClient } from '@angular/common/http';
 
 export class AppComponent implements OnInit {
 
-  sample: any;
-  sample2: any;
+  sample: any = {};
+  sample2: any = {};
 
   constructor(private http: HttpClient) {
-    this.http.get("assets/sample.json").subscribe(data => {
-      console.log(data);
-      this.sample = data;
-    });
-    this.http.get("assets/sample2.json").subscribe(data => {
-      console.log(data);
-      this.sample2 = data;
-
-    });
   }
 
-  ngOnInit() {
-    // console.log(sample)
-    // console.log(sample2)
+  async ngOnInit() {
+    await this.http.get("assets/sample.json").subscribe(data => {
+      this.sample = data;
+    });
+    
+    await this.http.get("assets/sample2.json").subscribe(data => {
+      this.sample2 = data;
+    });
+
+    console.log(this.sample);
 
     // for (const i in Object.keys(sample)) {
     // console.log( Object.keys(sample)[i] + ' ----- ' + Object.keys(sample2)[i]) //keys
@@ -38,8 +36,7 @@ export class AppComponent implements OnInit {
 
     // }
 
-    console.log(this.getLength());
-
+    // console.log(this.getLength());
   }
 
   checkType(type1, type2): boolean {
