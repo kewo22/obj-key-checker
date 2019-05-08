@@ -20,9 +20,11 @@ export class AppComponent implements OnInit {
 
 
       // console.log(typeof sample[Object.keys(sample)[i]] + ' ----- '  + typeof sample2[Object.keys(sample2)[i]]); //type
-      console.log(this.checkType(typeof sample[Object.keys(sample)[i]] , typeof sample2[Object.keys(sample2)[i]])); //type check
+      // console.log(this.checkType(typeof sample[Object.keys(sample)[i]], typeof sample2[Object.keys(sample2)[i]])); //type check
 
     }
+
+    console.log(this.getLength());
 
   }
 
@@ -32,6 +34,10 @@ export class AppComponent implements OnInit {
 
   checkValue(val1: string, val2: string): boolean {
     return val1 === val2;
+  }
+
+  getLength(): number {
+    return (Object.keys(sample).length > Object.keys(sample2).length) ? Object.keys(sample).length : Object.keys(sample2).length;
   }
 
 }
