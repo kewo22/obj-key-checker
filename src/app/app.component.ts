@@ -15,9 +15,11 @@ export class AppComponent implements OnInit {
   constructor(private http: HttpClient) {
     this.http.get("assets/sample.json").subscribe(data => {
       console.log(data);
+      this.sample = data;
     });
     this.http.get("assets/sample2.json").subscribe(data => {
       console.log(data);
+      this.sample2 = data;
 
     });
   }
