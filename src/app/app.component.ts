@@ -9,8 +9,8 @@ import { HttpClient } from '@angular/common/http';
 
 export class AppComponent implements OnInit {
 
-  sample:any;
-  sample2:any;
+  sample: any;
+  sample2: any;
 
   constructor(private http: HttpClient) {
     this.http.get("assets/sample.json").subscribe(data => {
@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
     });
     this.http.get("assets/sample2.json").subscribe(data => {
       console.log(data);
-      
+
     });
   }
 
@@ -27,12 +27,12 @@ export class AppComponent implements OnInit {
     // console.log(sample2)
 
     // for (const i in Object.keys(sample)) {
-      // console.log( Object.keys(sample)[i] + ' ----- ' + Object.keys(sample2)[i]) //keys
-      // console.log(this.checkValue(Object.keys(sample)[i], Object.keys(sample2)[i])); // key check
+    // console.log( Object.keys(sample)[i] + ' ----- ' + Object.keys(sample2)[i]) //keys
+    // console.log(this.checkValue(Object.keys(sample)[i], Object.keys(sample2)[i])); // key check
 
 
-      // console.log(typeof sample[Object.keys(sample)[i]] + ' ----- '  + typeof sample2[Object.keys(sample2)[i]]); //type
-      // console.log(this.checkType(typeof sample[Object.keys(sample)[i]], typeof sample2[Object.keys(sample2)[i]])); //type check
+    // console.log(typeof sample[Object.keys(sample)[i]] + ' ----- '  + typeof sample2[Object.keys(sample2)[i]]); //type
+    // console.log(this.checkType(typeof sample[Object.keys(sample)[i]], typeof sample2[Object.keys(sample2)[i]])); //type check
 
     // }
 
@@ -49,7 +49,7 @@ export class AppComponent implements OnInit {
   }
 
   getLength(): number {
-    // return (Object.keys(sample).length > Object.keys(sample2).length) ? Object.keys(sample).length : Object.keys(sample2).length;
+    return (Object.keys(this.sample).length > Object.keys(this.sample2).length) ? Object.keys(this.sample).length : Object.keys(this.sample2).length;
   }
 
 }
