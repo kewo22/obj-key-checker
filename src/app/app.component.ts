@@ -16,10 +16,11 @@ export class AppComponent implements OnInit {
 
     for (const i in Object.keys(sample)) {
       // console.log( Object.keys(sample)[i] + ' ----- ' + Object.keys(sample2)[i]) //keys
-      // console.log(this.checkValue(Object.keys(sample)[i], Object.keys(sample2)[i]));
+      // console.log(this.checkValue(Object.keys(sample)[i], Object.keys(sample2)[i])); // key check
 
 
-      console.log(typeof sample[Object.keys(sample)[i]] + ' ----- '  + typeof sample[Object.keys(sample2)[i]]);
+      // console.log(typeof sample[Object.keys(sample)[i]] + ' ----- '  + typeof sample2[Object.keys(sample2)[i]]); //type
+      console.log(this.checkType(typeof sample[Object.keys(sample)[i]] , typeof sample2[Object.keys(sample2)[i]])); //type check
 
     }
 
