@@ -1,0 +1,14 @@
+{
+  "customer_no": "Customer No",
+  "customer_name": "Customer Name",
+  "customer_service_system": "Customer Service System",
+  "gideons_web": "GIDEONS WEB",
+  "session_expired": "Session Expired, Please Login Again",
+  "language": "Language",
+  "logout": "Logout",
+  "email": "Email",
+  "new_order": "New order",
+  "search_orders": "Search order",
+  "create_delivery_order": "Create delivery order",
+  "select_customer": "Select Customer"
+}
