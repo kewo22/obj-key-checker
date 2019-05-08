@@ -10,5 +10,7 @@
   "new_order": "New order",
   "search_orders": "Search order",
   "create_delivery_order": "Create delivery order",
-  "select_customer": "Select Customer"
+  "select_customer": {
+    "eewf": "wefew"
+  }
 }
