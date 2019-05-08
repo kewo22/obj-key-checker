@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import sample from './sample.json';
 import sample2 from './sample2.json';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'my-app',
@@ -9,6 +10,12 @@ import sample2 from './sample2.json';
 })
 
 export class AppComponent implements OnInit {
+
+  constructor(private http: HttpClient) {
+    this.http.get("./sample.json").subscribe(data => {
+      console.log(data);
+    });
+  }
 
   ngOnInit() {
     // console.log(sample)
