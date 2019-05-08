@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
   constructor(private http: HttpClient) {
     this.http.get("./sample.json").subscribe(data => {
       console.log(data);
+      
     });
   }
 
