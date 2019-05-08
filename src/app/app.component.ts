@@ -13,9 +13,9 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     // console.log(sample)
     // console.log(sample2)
-
+    
     for (const i in Object.keys(sample)) {
-      console.log(typeof Object.keys(sample)[i] + ' ----- ' + typeof Object.keys(sample2)[i])
+      console.log(Object.keys(sample)[i] + ' ----- ' + Object.keys(sample2)[i])
       // console.log(this.checkValue(Object.keys(sample)[i], Object.keys(sample2)[i]));
     }
 
