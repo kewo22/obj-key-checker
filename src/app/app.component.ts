@@ -13,9 +13,24 @@ export class AppComponent implements OnInit {
   sample2: any = {};
 
   constructor(private http: HttpClient) {
+    
   }
 
   ngOnInit() {
+
+setTimeout(() => {
+      this.http.get("assets/sample.json").subscribe(data => {
+        this.sample = data;
+      });
+
+      this.http.get("assets/sample2.json").subscribe(data => {
+        this.sample2 = data;
+      });
+
+      console.log(this.sample);
+
+    }, 1000)
+
 
     // this.getJson();
 
@@ -30,19 +45,6 @@ export class AppComponent implements OnInit {
     // }
 
     // console.log(this.getLength());
-  }
-
-  async getJson(): Promise<void> {
-    await this.http.get("assets/sample.json").subscribe(data => {
-      this.sample = data;
-    });
-
-    await this.http.get("assets/sample2.json").subscribe(data => {
-      this.sample2 = data;
-    });
-
-    console.log(this.sample);
-
   }
 
   checkType(type1, type2): boolean {
